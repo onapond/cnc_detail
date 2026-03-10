@@ -8,3 +8,6 @@ node_modules
 out
 coverage
 *.log
+
+.vercel
+.env*.local
