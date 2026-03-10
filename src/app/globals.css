@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 33% 97%;
+    --foreground: 210 29% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 29% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 29% 16%;
+    --primary: 173 58% 22%;
+    --primary-foreground: 45 46% 98%;
+    --secondary: 45 27% 92%;
+    --secondary-foreground: 210 29% 16%;
+    --muted: 40 20% 93%;
+    --muted-foreground: 215 14% 42%;
+    --accent: 32 82% 87%;
+    --accent-foreground: 210 29% 16%;
+    --destructive: 0 78% 57%;
+    --destructive-foreground: 45 46% 98%;
+    --border: 32 24% 86%;
+    --input: 32 24% 86%;
+    --ring: 173 58% 22%;
+    --radius: 1rem;
+    --font-sans: "Segoe UI", "Noto Sans KR", sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(217, 119, 6, 0.12), transparent 28%),
+      radial-gradient(circle at bottom right, rgba(13, 148, 136, 0.08), transparent 32%);
+  }
+}
+
+@layer components {
+  .admin-surface {
+    @apply rounded-3xl border border-white/70 bg-white/85 shadow-panel backdrop-blur;
+  }
+}
